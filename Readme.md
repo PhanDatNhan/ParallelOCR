@@ -4,8 +4,6 @@ Dự án này triển khai hệ thống nhận diện ký tự (OCR) với Tesse
 
 - `ocrBaseline.py`: chế độ tuần tự.
 - `ocrParallel.py`: song song trên một máy bằng nhiều process.
-- `ocrMPI.py`: phân tán với MPI.
-- `ocrHybrid.py`: kết hợp MPI và nhiều process trên mỗi node.
 
 ## Tính năng chính
 
@@ -18,9 +16,7 @@ Dự án này triển khai hệ thống nhận diện ký tự (OCR) với Tesse
 
 - Python 3.12
 - Tesseract OCR đã cài đặt và cấu hình trong `PATH`.
-- Microsoft MPI (MS-MPI) cho chế độ MPI.
 - Các thư viện Python trong `requirements.txt`:
-  - `mpi4py`
   - `opencv-python`
   - `pytesseract`
   - `python-Levenshtein`
@@ -32,17 +28,14 @@ Dự án này triển khai hệ thống nhận diện ký tự (OCR) với Tesse
 1. Cài đặt Tesseract OCR:
    https://github.com/UB-Mannheim/tesseract/wiki
 
-2. Cài đặt Microsoft MPI:
-   https://learn.microsoft.com/en-us/message-passing-interface/microsoft-mpi
-
-3. Tạo và kích hoạt virtual environment:
+2. Tạo và kích hoạt virtual environment:
 
 ```
 python -m venv ocr_env
 ocr_env\Scripts\activate
 ```
 
-4. Cài đặt các thư viện Python:
+3. Cài đặt các thư viện Python:
 
 ```
 pip install -r requirements.txt
