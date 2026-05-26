@@ -72,28 +72,6 @@ python ocrBaseline.py
 python ocrParallel.py
 ```
 
-### 3. Chạy chế độ MPI phân tán
-
-Ví dụ chạy trên hai host:
-
-```powershell
-mpiexec -hosts 2 IP1 IP2 -n 2 python ocrMPI.py
-```
-
-### 4. Chạy chế độ kết hợp MPI + shared memory
-
-Ví dụ:
-
-```powershell
-mpiexec -hosts 2 IP1 IP2 -n 8 python ocrHybrid.py
-```
-
-Hoặc dùng file host:
-
-```powershell
-mpiexec -machinefile hostfile.txt -n 8 python ocrHybrid.py
-```
-
 ## Cấu trúc thư mục
 
 ```
@@ -105,8 +83,6 @@ files/
 ├── metrics.py
 ├── ocr_engine.py
 ├── ocrBaseline.py
-├── ocrHybrid.py
-├── ocrMPI.py
 ├── ocrParallel.py
 ├── result_writer.py
 ├── requirements.txt
@@ -121,6 +97,5 @@ files/
 
 ## Ghi chú
 
-- Đảm bảo mọi máy tham gia MPI đều cài đặt cùng phiên bản Python, Tesseract và thư viện giống nhau.
 - Nếu gặp lỗi với `pytesseract`, kiểm tra lại đường dẫn Tesseract trong biến môi trường `PATH`.
 - Sửa đường dẫn `IMAGE_FOLDER` và `LABEL_FOLDER` trong `dataConfig.py` nếu cần sử dụng dataset khác.
